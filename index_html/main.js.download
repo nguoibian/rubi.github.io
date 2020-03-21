@@ -1,0 +1,699 @@
+//Project custom script
+app =
+{
+    init: function () {
+        app.initToggle(".jsExpandAllTabs",".jsExpandAll",".jsCollapseAll");
+        app.initToggle(".jsExpandAllTabs2",".jsExpandAll2",".jsCollapseAll2");
+        app.initFadeToggle("#search .jsToggle", "#search .jsSearchForm", ".breadcrumb");
+        app.initAccordionTabStatus("#accordion > .panel");
+        //app.initAccordionTabStatus("#accordion1 .title a");
+        app.initAccordionExpandToggle(".jsExpandAllTabs");
+        app.initAccordionExpandToggle(".jsExpandAllTabs2");
+        app.initOpenAccordionTabWithLink("#accordion > .panel", ".jsTabTriggerFeatures");
+        app.initScrollToTop(".jsScrollTop");
+        app.initBootstrapMultiModalBugFix();
+        app.initRemoveThis(".jsRemoveThis", ".jsRemoveBtn");
+        app.initRemoveThis("table tr", ".jsRemoveBtn");
+        app.initCheckActive("#license-payWith");
+        app.initScrollToLink();
+        app.setValueOnTextInputChange(".jsChangeValue");
+        app.initRatingStars();
+        app.initContentFilter("#filter", ".languages-container .lang-item");
+        app.initSearchAutocomplete();
+        app.initSearchVersionsAutocomplete();
+
+        app.loadMoreLicense("#loadMoreLicenses", "#addLicense");
+        app.loadAllLicenses("#loadAllLicenses", "#num_licenses");
+        app.clearLicenseSearch("#clearLicenseSearch");
+
+        app.loadMoreInvoices("#loadMoreInvoices", "#invoiceTable");
+        app.loadAllInvoices("#loadAllInvoices", "#num_invoices");
+        app.clearInvoiceSearch("#clearInvoiceSearch");
+        app.create_new_invoice("#create_new_invoice");
+
+		app.loadMoreActivations("#loadMoreActivations", "#activationTable");
+		app.loadAllActivations("#loadAllActivations", "#num_activations");
+        app.clearActivationSearch("#clearActivationSearch");
+        app.initInvoiceSearch("#activationSort");
+
+        app.initLoadMore(".jsLoadMore");
+        app.initLoadMoreVersions(".jsLoadMoreVersions");
+        app.initSubmitLogin(".jsSubmitLogin");
+        app.initSubmitLostPassword(".jsSubmitLostPassword");
+        app.initSubmitRegister(".jsSubmitRegister");
+        app.initLicenseSearch("#licenseSort");
+        app.initInvoiceSearch("#invoiceSort");
+    },
+    loadMoreLicense: function (btn, where) {
+
+		$(btn).on("click", function () {
+
+			var search = '&search='+encodeURIComponent($('#licenseSearchQuery').val());
+			var sort_by = '&sort_by='+$('#licenseSort').val();
+
+			$.ajax({
+				type: 'POST',
+				url: '/clients/index.php?ajax=yes&start_at_item='+$(where+' > li').length+sort_by+search,
+
+				success: function (html) {
+					$(btn+' span.load-more-text').text('Load More');
+					$(btn).removeClass('loading');
+
+					$(where).append(html);
+
+					$('#result_count').html($(where+' > li').length);
+				},
+				beforeSend: function () {
+					$(btn+' span.load-more-text').text('Loading...');
+					$(btn).addClass('loading');
+				}
+			});
+
+			return false;
+        });
+    },
+    loadAllLicenses: function (btn, max) {
+		$(btn).on("click", function () {
+			$(btn+' span.load-more-text').text('Loading...');
+			$(btn).addClass('loading');
+			window.location = "/clients/index.php?items_per_page="+$(max).html()+'&sort_by='+$('#licenseSort').val()+'&search='+encodeURIComponent($('#licenseSearchQuery').val());
+			return false;
+        });
+    },
+    clearLicenseSearch: function (btn) {
+		$(btn).on("click", function () {
+			$(btn+' span.load-more-text').text('Loading...');
+			$(btn).addClass('loading');
+			window.location = '/clients/index.php?sort_by='+$('#licenseSort').val();
+			return false;
+        });
+    },
+    loadMoreInvoices: function (btn, where) {
+
+		$(btn).on("click", function () {
+
+			var start_at_item = '&start_at_item='+$(where+' >tbody >tr').length;
+
+			$.ajax({
+				type: 'POST',
+				url: '/clients/invoices.php?ajax=yes'+start_at_item+get_invoice_search_string(),
+
+				success: function (html) {
+					$(btn+' span.load-more-text').text('Load More');
+					$(btn).removeClass('loading');
+
+					$(where+' >tbody').append(html);
+
+					$('#result_count').html($(where+' >tbody >tr').length);
+				},
+				beforeSend: function () {
+					$(btn+' span.load-more-text').text('Loading...');
+					$(btn).addClass('loading');
+				}
+			});
+
+			return false;
+        });
+    },
+    loadAllInvoices: function (btn, max) {
+		$(btn).on("click", function () {
+
+			$(btn+' span.load-more-text').text('Loading...');
+			$(btn).addClass('loading');
+			window.location = "/clients/invoices.php?items_per_page="+$(max).html()+get_invoice_search_string();
+			return false;
+        });
+    },
+    clearInvoiceSearch: function (btn) {
+		$(btn).on("click", function () {
+			$(btn+' span.load-more-text').text('Loading...');
+			$(btn).addClass('loading');
+			window.location = '/clients/invoices.php?sort_by='+$('#invoiceSort').val();
+			return false;
+        });
+    },
+    create_new_invoice: function (btn) {
+		$(btn).on("click", function () {
+
+			var data = $("#invoice_select").serialize();
+
+			$.ajax({
+				type: 'POST',
+				url: '/clients/invoices.php?ajax=yes',
+				async: true,
+				cache: false,
+				data: data,
+
+				success: function (html, textStatus, jqXHR) {
+					$(btn+' span.load-more-text').text('Add to new invoice');
+					$(btn).removeClass('loading');
+
+
+					if (jqXHR.getResponseHeader("x-result") == 'success')
+						$("#modalGeneralLabel").text('Success!');
+					else if (jqXHR.getResponseHeader("x-result") == 'error')
+						$("#modalGeneralLabel").text('Error!');
+					else
+						$("#modalGeneralLabel").text(jqXHR.getResponseHeader("x-result"));
+
+					$("#no_email_contact_us").hide();
+					$("#general_message").html(html);
+					$("#modal-general").modal('show');
+				},
+				beforeSend: function () {
+					$(btn+' span.load-more-text').text('Loading...');
+					$(btn).addClass('loading');
+				}
+			});
+
+			return false;
+        });
+    },
+    loadMoreActivations: function (btn, where) {
+
+		$(btn).on("click", function () {
+
+			var start_at_item = '&start_at_item='+$(where+' >tbody >tr').length;
+
+			$.ajax({
+				type: 'POST',
+				url: '/clients/activation_history.php?ajax=yes'+start_at_item+get_activation_search_string(),
+
+				success: function (html) {
+					$(btn+' span.load-more-text').text('Load More');
+					$(btn).removeClass('loading');
+
+					$(where+' >tbody').append(html);
+
+					$('#result_count').html($(where+' >tbody >tr').length);
+				},
+				beforeSend: function () {
+					$(btn+' span.load-more-text').text('Loading...');
+					$(btn).addClass('loading');
+				}
+			});
+
+			return false;
+        });
+    },
+    loadAllActivations: function (btn, max) {
+		$(btn).on("click", function () {
+
+			$(btn+' span.load-more-text').text('Loading...');
+			$(btn).addClass('loading');
+			window.location = "/clients/activation_history.php?items_per_page="+$(max).html()+get_activation_search_string();
+			return false;
+        });
+    },
+    clearActivationSearch: function (btn) {
+		$(btn).on("click", function () {
+			$(btn+' span.load-more-text').text('Loading...');
+			$(btn).addClass('loading');
+			window.location = '/clients/activation_history.php?sort_by='+$('#activationSort').val()+'&lid='+$('#lid').val();
+			return false;
+        });
+    },
+    initSearchAutocomplete: function () {
+        $(document).ready(function($) {
+            var substringMatcher = function(strs) {
+                return function findMatches(q, cb) {
+                    var matches, substringRegex;
+
+                    // an array that will be populated with substring matches
+                    matches = [];
+
+                    // regex used to determine if a string contains the substring `q`
+                    substrRegex = new RegExp(q, 'i');
+
+                    // iterate through the pool of strings and for any string that
+                    // contains the substring `q`, add it to the `matches` array
+                    $.each(strs, function(i, str) {
+                    if (substrRegex.test(str)) {
+                        matches.push(str);
+                    }
+                    });
+
+                    cb(matches);
+                };
+            };
+
+            var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+            'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+            'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+            'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+            'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+            'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+            'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+            'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+            'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+            ];
+
+            if(jQuery().typeahead) {
+                $('#inputSearch .typeahead').typeahead({
+                        hint: true,
+                        highlight: true,
+                        minLength: 1
+                    },
+                    {
+                        name: 'states',
+                        source: substringMatcher(states)
+                    });
+            }
+
+        })
+    },
+    initSearchVersionsAutocomplete: function ()
+    {
+        $(document).ready(function($)
+        {
+            if(jQuery().typeahead)
+            {
+
+				// Instantiate the Bloodhound suggestion engine
+				var help_results = new Bloodhound({
+					datumTokenizer: function (datum) {
+						return Bloodhound.tokenizers.whitespace(datum.txt);
+					},
+					queryTokenizer: Bloodhound.tokenizers.whitespace,
+					remote: {
+						url:		'/search_versions.php?ajax=yes&help=yes&versions=no&query=%QUERY',
+						wildcard:	'%QUERY',
+						filter:		function (help_results) {
+							return $.map(help_results, function (item) {
+								return {
+									txt:	item.txt,
+									url:	item.url
+								};
+							});
+						}
+					}
+				});
+				var versions_results = new Bloodhound({
+					datumTokenizer: function (datum) {
+						return Bloodhound.tokenizers.whitespace(datum.txt);
+					},
+					queryTokenizer: Bloodhound.tokenizers.whitespace,
+					remote: {
+						url:		'/search_versions.php?ajax=yes&query=%QUERY',
+						wildcard:	'%QUERY',
+						filter:		function (versions_results) {
+							return $.map(versions_results, function (item) {
+								return {
+									txt:	item.txt,
+									url:	item.url
+								};
+							});
+						}
+					}
+				});
+
+                $('#versionsSearch .typeahead').typeahead(
+					{
+						hint: 		true,
+						highlight:	true,
+						limit:		12,
+						minLength:	3
+					}, {
+						name: 'help_results',
+						valueKey:	'url',
+						displayKey:	'txt',
+						source: 	help_results.ttAdapter(),
+						templates: {
+							header: '<h3 class="search-type">Knowledgebase</h3>',
+							suggestion: function (data) {
+									if (data.url == '')
+										return '<p class="search-item">' + data.txt + '</p>';
+									return '<p class="search-item"><a href="'+ data.url +'">' + data.txt + '</a></p>';
+							}
+						}
+					}, {
+						name: 'versions_results',
+						valueKey:	'url',
+						displayKey:	'txt',
+						source: 	versions_results.ttAdapter(),
+						templates: {
+							header: '<h3 class="search-type">Versions</h3>',
+							suggestion: function (data) {
+									if (data.url == '')
+										return '<p class="search-item">' + data.txt + '</p>';
+									return '<p class="search-item"><a href="'+ data.url +'">' + data.txt + '</a></p>';
+							}
+						}
+					}
+				);
+            }
+        })
+    },
+    initContentFilter: function (input, item) {
+        $(document).ready(function(){
+            $(input).keyup(function(){
+
+                // Retrieve the input field text and reset the count to zero
+                var filter = $(this).val(), count = 0;
+
+                // Loop through the comment list
+                $(item).each(function(){
+
+                    // If the list item does not contain the text phrase fade it out
+                    if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                        $(this).fadeOut();
+
+                        // Show the list item if the phrase matches and increase the count by 1
+                    } else {
+                        $(this).show();
+                        count++;
+                    }
+                });
+
+                // Update the count
+                var numberItems = count;
+                $("#filter-count").text("Number of Comments = "+count);
+            });
+        });
+    },
+    initRatingStars: function () {
+        $(".jsRatingStars").find("li.active").parent().parent().removeClass("noRatingJet");
+        $(".jsRatingStars li").on("click", function(){
+            $(this).parent().parent().removeClass("noRatingJet");
+            $(this).parent().find("li").removeClass("active");
+            $(this).addClass("active");
+        });
+    },
+    setValueOnTextInputChange: function (input) {
+        $(input).on('input', function() {
+            var ID = $(this).attr("id");
+            app.containers.documentBody.find("[data-target='#"+ID+"']").text($(this).val());
+        });
+    },
+    initScrollToLink: function () {
+        $(".jsScrollToLink").click(function() {
+            var item = $(this).attr("data-id");
+            app.containers.htmlBody.animate({
+                scrollTop: $(item).offset().top - 20
+            }, 1000);
+        });
+    },
+    initCheckActive: function (element) {
+        $(".jsBtn").on("click", function() {
+            //var dataAttr = $(this).attr("data-group");
+            //$(element).find('a[data-group="'+dataAttr+'"]').removeClass(".active");
+            $(element).find(".jsBtn").removeClass("active");
+            $(this).addClass("active");
+        });
+    },
+    initRemoveThis: function (element, btn) {
+        $(btn).on("click", function() {
+            $(this).closest(".jsRemoveThis").fadeOut(function(){
+               this.remove();
+            });
+        });
+    },
+    initBootstrapMultiModalBugFix: function (btn) {
+        $(document).on('show.bs.modal', function (event) {
+            if (!event.relatedTarget) {
+                $('.modal').not(event.target).modal('hide');
+            }
+            if ($(event.relatedTarget).parents('.modal').length > 0) {
+                $(event.relatedTarget).parents('.modal').modal('hide');
+            }
+        });
+        $(document).on('shown.bs.modal', function (event) {
+            if (app.containers.documentBody.hasClass('modal-open') == false) {
+                app.containers.documentBody.addClass('modal-open');
+            }
+        });
+    },
+    initScrollToTop: function (button) {
+        var btn = $(button);
+        btn.on("click", function() {
+            app.containers.htmlBody.animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+        $(window).scroll(function () {
+            var thisItem = $(this);
+            if (thisItem.scrollTop() > 120) {
+                btn.addClass('is-show')
+            } else {
+                btn.removeClass('is-show')
+            }
+        });
+    },
+    initAccordionTabStatus: function (tab) {
+        $(tab).find("[data-toggle='collapse']").on('click', function(){
+            if ($(this).hasClass("opened")){
+                $(this).removeClass("opened");
+            } else {
+                $(this).closest(".panel-group").find(".opened").removeClass("opened");
+                $(this).addClass("opened");
+            }
+        });
+    },
+    initOpenAccordionTabWithLink: function (tab, link) {
+        $(link).click(function() {
+            var item = $(this).attr("data-id");
+            if (!$(item).hasClass("in")){
+                $( "[data-item-id='"+ item +"'] .panel-title a" ).trigger( "click" );
+            }
+            app.containers.htmlBody.animate({
+                scrollTop: $( "[data-item-id='"+ item +"']" ).offset().top - 50
+            }, 1000);
+        });
+    },
+    initAccordionExpandToggle: function (element) {
+        var showAll = 0;
+        $(element).click(function() {
+            var dataID = $(this).attr("data-id");
+            if (showAll == 0){
+                $(dataID + ' .collapse').collapse('show');
+                $(dataID + ' .panel-title a').addClass('opened');
+                showAll = 1;
+            } else {
+                $(dataID + ' .collapse').collapse('hide');
+                $(dataID + ' .panel-title a').removeClass('opened');
+                showAll = 0;
+            }
+        });
+    },
+    initFadeToggle: function (button, element, secondElement) {
+        $(button).on("click", function(){
+            $(element).fadeToggle(500, function(){
+                $(secondElement).fadeToggle();
+            });
+            if (button == "#search .jsToggle")
+            {
+				$("#versionsSearch input[name='query']").focus();
+			}
+        });
+    },
+    initToggle: function (button, element, secondElement) {
+        $(button).on("click", function(){
+            $(element).toggle();
+            $(secondElement).toggle();
+        });
+    },
+    initLoadMore: function(btn) {
+        $(btn).on("click", function () {
+                $.ajax({
+                    type: "POST",
+                    url: "sleep.php",
+
+                    success: function (html) {
+                        $('#loadMore span.load-more-text').text('Load More');
+                        $("#loadMore").removeClass('loading');
+                    },
+                    beforeSend: function () {
+                        $('#loadMore span.load-more-text').text('Loading...');
+                        $("#loadMore").addClass('loading');
+                    }
+                });
+
+                return false;
+            });
+    },
+    initLoadMoreVersions: function(btn) {
+        $(btn).on("click", function () {
+				window.location = "versions.php?action=allversions";
+                return false;
+            });
+    },
+    initSubmitLogin: function(btn) {
+        $(btn).on("click", function () {
+            var username = $("#client_id").val();
+            var password = $("#client_password").val();
+
+            if ((username == "") || (password == "")) {
+                $("#login_message").html(error_div("Please enter a username and a password"));
+            }
+            else {
+                $.ajax({
+                    type: "POST",
+                    url: "/clients/login.php",
+                    data: "ajax_login=1&uid=" + username + "&password=" + encodeURIComponent(password),
+                    success: function (html) {
+                        if (html == 'true') {
+                            window.location = "/clients/index.php";
+                        }
+                        else {
+                            $('#submitLogin span.sign-in-text').text('Sign in');
+                            $("#submitLogin").removeClass('loading');
+                            $("#login_message").html(html);
+                        }
+                    },
+			        error: function(request, status, err) {
+		                $("#login_message").html(error_div(status+': '+err));
+					},
+                    beforeSend: function () {
+                        $('#submitLogin span.sign-in-text').text('Loading...');
+                        $("#submitLogin").addClass('loading');
+                    }
+                });
+            }
+            return false;
+        });
+
+        //allow entery key
+        $('#login-form input').keydown(function(e) {
+    		if (e.keyCode == 13) {
+				$(btn).trigger("click");
+			}
+		});
+
+    },
+    initSubmitLostPassword: function(btn) {
+        $(btn).on("click", function () {
+            var auth = $("#lost_password_form input[name='auth']").val();
+            var type = $("#lost_password_form input[name='type']").val();
+
+			$.ajax({
+				type: "POST",
+				url: "/clients/lost_password.php",
+				data: "ajax_post=1&action=send_email&auth=" + auth + "&type=" + type,
+				success: function (html) {
+					if (html == 'true') {
+						$('#submitLostPassword span.lost-password-text').text('Submit');
+						$('#submitLostPassword').removeClass('loading');
+						$('#submitLostPassword').attr("disabled", true);
+
+						$("#modalGeneralLabel").text('Success!');
+						$("#general_message").text("Message has been sent.  Please check your email for the confirmation URL.\n\nIf the E-Mail address provided is not in our system, you'll still see this message and no E-Mail will be sent.\n");
+						$("#modal-general").modal('show');
+					}
+					else {
+						$('#submitLostPassword span.lost-password-text').text('Submit');
+						$("#submitLostPassword").removeClass('loading');
+						$("#lost_password_message").html(error_div(html));
+					}
+				},
+				error: function(request, status, err) {
+					$("#lost_password_message").html(error_div(status));
+				},
+				beforeSend: function () {
+					$('#submitLostPassword span.lost-password-text').text('Loading...');
+					$("#submitLostPassword").addClass('loading');
+				}
+			});
+
+            return false;
+        });
+    },
+    initSubmitRegister: function(btn) {
+        $(btn).on("click", function () {
+
+			var post_data = "ajax=yes&action=post"+add_var('fname')+add_var('mname')+add_var('lname')+add_var('street')+add_var('city')+add_var('state')+add_var('zip')+add_var('country')+add_var('phone')+add_var('email')+add_var('website')+add_var('name')+add_var('comments')+add_var('g-recaptcha-response');
+
+			$.ajax({
+				type: "POST",
+				url: "/createclient.php",
+				data: post_data,
+				success: function (html) {
+
+					if (html == 'true') {
+						$("#modal-register").modal('hide');
+						$('#submitRegister span.register-text').text('Submit');
+						$("#submitRegister").removeClass('loading');
+
+						$("#modalGeneralLabel").text('Success!');
+						$("#general_message").text("Account has been created. Login has been E-Mailed to you.");
+						$("#modal-general").modal('show');
+					}
+					else
+					{
+						$('#submitRegister span.register-text').text('Submit');
+						$("#submitRegister").removeClass('loading');
+						$("#register_message").html(error_div(html));
+
+						grecaptcha.reset();
+					}
+				},
+				error: function(request, status, err) {
+					$("#register_message").html(status);
+				},
+				beforeSend: function () {
+					$('#submitRegister span.register-text').text('Loading...');
+					$("#submitRegister").addClass('loading');
+				}
+			});
+
+			return false;
+        });
+    },
+    initLicenseSearch: function (sort) {
+		$(sort).on('change', function() {
+			this.closest('form').submit();
+			return false;
+		});
+	},
+    initInvoiceSearch: function (sort) {
+
+		if ($('#min_date').length == 0) {
+			return;
+		}
+
+		$('#min_date').datetimepicker({ format: 'MM/DD/YYYY' });
+		$('#max_date').datetimepicker({ format: 'MM/DD/YYYY' });
+
+		$(sort).on('change', function() {
+			this.closest('form').submit();
+			return false;
+		});
+	}
+};
+
+//Theme main options
+app.options = {};
+
+//Theme main containers as jquery objects
+app.containers = {
+    htmlBody : $('html, body'),
+    documentBody : $('body')
+};
+
+$(app.init);
+
+function error_div(str)
+{
+	return "<div class=\"alert alert-danger mt30\" role=\"alert\"><span class=\"sr-only\">Error:</span><i class=\"sprite cmn-alert-danger postn1 mr12\"><!-- --></i>"+str+"</div>";
+}
+function add_var(n)
+{
+	return '&'+n+'='+encodeURIComponent($("#"+n).val());
+}
+function get_invoice_search_string()
+{
+	var sort_by = '&sort_by='+$('#invoiceSort').val();
+	var search = '&search='+encodeURIComponent($('#invoiceSearchQuery').val());
+	var min_date = '&min_date='+encodeURIComponent($("#min_date").val());
+	var max_date = '&max_date='+encodeURIComponent($("#max_date").val());
+
+	return sort_by+search+min_date+max_date;
+}
+function get_activation_search_string()
+{
+	var sort_by = '&sort_by='+$('#activationSort').val();
+	var search = '&search='+encodeURIComponent($('#activationSearchQuery').val());
+	var min_date = '&min_date='+encodeURIComponent($("#min_date").val());
+	var max_date = '&max_date='+encodeURIComponent($("#max_date").val());
+	var lid = '&lid='+encodeURIComponent($("#lid").val());
+
+	return sort_by+search+min_date+max_date+lid;
+}
