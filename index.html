@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/dangn.DESKTOP-N5Q1NCD/Desktop/index.html -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DirectAdmin Web Control Panel Version History</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="https://directadmin.com/apple-touch-icon.png">
+    <link rel="icon" href="https://directadmin.com/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="./index_files/screen.css">
+    <script type="text/javascript" async="" src="./index_files/recaptcha__vi.js.download"></script><script type="text/javascript" async="" src="./index_files/recaptcha__vi.js(1).download"></script><script src="./index_files/modernizr-2.8.3.min.js.download"></script>
+	<script type="text/javascript">
+		var CaptchaCallback = function(){
+			if ($('#g-recaptcha-id').length != 0) {
+				grecaptcha.render('g-recaptcha-id', {	'sitekey' : '6LdrYA0TAAAAAPwRep6hT-sNsw9W0tK3a44WWBV1',
+														'size' : 'compact'
+													});
+			}
+			if ($('#g-recaptcha-id2').length != 0) {
+				grecaptcha.render('g-recaptcha-id2', {	'sitekey' : '6LdrYA0TAAAAAPwRep6hT-sNsw9W0tK3a44WWBV1',
+														'size' : 'compact'
+													});
+			}
+			if ($('#g-recaptcha-id3').length != 0) {
+				grecaptcha.render('g-recaptcha-id3', {	'sitekey' : '6LdrYA0TAAAAAPwRep6hT-sNsw9W0tK3a44WWBV1',
+														'size' : 'compact'
+													});
+			}
+		};
+	</script>
+	<script src="./index_files/api.js.download" async="" defer=""></script>
+</head>
+<body class="tpl-default" style="">
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Modal - What's next? begin - - - - - - - - - - - - -->
+    <div class="modal" id="modal-orderNow" tabindex="-1" role="dialog" aria-labelledby="modalOrderNowLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close bgn bn p0" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="sprite cmn-close-silver-wide"><!-- --></i></span></button>
+                    <h4 class="modal-title c7 fw700" id="modalOrderNowLabel">Bạn muốn gì ?..</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="c7 fs18 fw500">Nhận cài <b>Directadmin Phiên bản mới nhất</b> chỉ với 500K. Bản quyền vĩnh viễn zzzzzzzzzzzzzzzz</p>
+                </div>
+                <div class="modal-footer pt0">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <button type="button" class="btn btn-primary btn-type2 fs20 btn-block mb20" data-toggle="modal" data-target="#modal-login">UPDATE.TAR.GZ</button>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <button type="button" class="btn btn-primary btn-type2 fs20 btn-block bg3 mb20" data-dismiss="modal" data-toggle="modal" data-target="#modal-register">Licsence.key</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal - What's next? end - - - - - - - - - - - - -->
+
+    <!-- Modal - Login form begin - - - - - - - - - - - - -->
+    <div class="modal" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close bgn bn p0" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="sprite cmn-close-silver-wide"><!-- --></i></span></button>
+                    <h4 class="modal-title c7 fw700" id="modalLoginLabel">Hello...</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form" class="form-type2 has-validation-callback" method="post" action="https://directadmin.com/clients/index.php">
+                        <div class="form-inline mt20">
+                            <div class="radio type1 mr40">
+                                <label>
+                                    <input type="radio" name="optionsRadios" value="option1" checked="">
+                                    <span><!-- --></span>Client area
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group mt20"><!-- has-error, has-success -->
+                            <input type="text" autofocus="" id="client_id" class="form-control" placeholder="Login">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="client_password" class="form-control" placeholder="Password">
+                        </div>
+                    </form>
+                        <div id="login_message"></div>
+                </div>
+                <div class="modal-footer pt0">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button type="button" id="submitLogin" class="jsSubmitLogin btn btn-primary btn-type2 fs20 btn-block mtn5 mb20"><span class="spinning"></span><span class="sign-in-text">Sign in</span></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 mb10 text-center text-left-sm">
+                            <a class="a2 fs18 fw500" href="https://directadmin.com/versions.php#" data-dismiss="modal" data-toggle="modal" data-target="#modal-register">Register</a>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 mb10 text-center text-right-sm">
+                            <a class="a2 fs18 fw500" href="https://directadmin.com/clients/lost_password.php">Forgot Password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal - login form end - - - - - - - - - - - - -->
+
+    <!-- Modal - Register form begin - - - - - - - - - - - - -->
+    <div class="modal" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modalRegisterLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close bgn bn p0" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="sprite cmn-close-silver-wide"><!-- --></i></span></button>
+                    <h4 class="modal-title c7 fw700" id="modalRegisterLabel">Dear new client...</h4>
+                </div>
+                <div class="modal-body pb0">
+					                    <form class="form-type2 has-validation-callback" id="registrationForm">
+                    <input type="hidden" name="action" value="post">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group"><!-- has-error, has-success -->
+                                    <input type="text" name="fname" id="fname" class="form-control" placeholder="Name" data-validation="length" data-validation-length="min2">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name" data-validation="length" data-validation-length="min2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group"><!-- has-error, has-success -->
+                                    <input type="text" name="street" id="street" class="form-control" placeholder="Street Address" data-validation="length" data-validation-length="min2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="city" id="city" class="form-control" placeholder="City" data-validation="length" data-validation-length="min2">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="state" id="state" class="form-control" placeholder="State/Province" data-validation="length" data-validation-length="min2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="zip" id="zip" class="form-control" placeholder="Zip/Postal Code" data-validation="length" data-validation-length="min2">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <select class="form-control" name="country" id="country" style="display: none;">
+                                        <option>Country</option>
+                                        <!-- List taken from http://www.freeformatter.com/iso-country-list-html-select.html -->
+										                                        <option value="AF">Afghanistan</option>
+                                        <option value="AX">Åland Islands</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AQ">Antarctica</option>
+                                        <option value="AG">Antigua and Barbuda</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaijan</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BY">Belarus</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BZ">Belize</option>
+                                        <option value="BJ">Benin</option>
+                                        <option value="BM">Bermuda</option>
+                                        <option value="BT">Bhutan</option>
+                                        <option value="BO">Bolivia, Plurinational State of</option>
+                                        <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                        <option value="BA">Bosnia and Herzegovina</option>
+                                        <option value="BW">Botswana</option>
+                                        <option value="BV">Bouvet Island</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="IO">British Indian Ocean Territory</option>
+                                        <option value="BN">Brunei Darussalam</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="KH">Cambodia</option>
+                                        <option value="CM">Cameroon</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="CV">Cape Verde</option>
+                                        <option value="KY">Cayman Islands</option>
+                                        <option value="CF">Central African Republic</option>
+                                        <option value="TD">Chad</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CN">China</option>
+                                        <option value="CX">Christmas Island</option>
+                                        <option value="CC">Cocos (Keeling) Islands</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="KM">Comoros</option>
+                                        <option value="CG">Congo</option>
+                                        <option value="CD">Congo, the Democratic Republic of the</option>
+                                        <option value="CK">Cook Islands</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="CI">Côte d'Ivoire</option>
+                                        <option value="HR">Croatia</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="CW">Curaçao</option>
+                                        <option value="CY">Cyprus</option>
+                                        <option value="CZ">Czech Republic</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="DJ">Djibouti</option>
+                                        <option value="DM">Dominica</option>
+                                        <option value="DO">Dominican Republic</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="GQ">Equatorial Guinea</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="ET">Ethiopia</option>
+                                        <option value="FK">Falkland Islands (Malvinas)</option>
+                                        <option value="FO">Faroe Islands</option>
+                                        <option value="FJ">Fiji</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="FR">France</option>
+                                        <option value="GF">French Guiana</option>
+                                        <option value="PF">French Polynesia</option>
+                                        <option value="TF">French Southern Territories</option>
+                                        <option value="GA">Gabon</option>
+                                        <option value="GM">Gambia</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GI">Gibraltar</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="GL">Greenland</option>
+                                        <option value="GD">Grenada</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GG">Guernsey</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GW">Guinea-Bissau</option>
+                                        <option value="GY">Guyana</option>
+                                        <option value="HT">Haiti</option>
+                                        <option value="HM">Heard Island and McDonald Islands</option>
+                                        <option value="VA">Holy See (Vatican City State)</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HK">Hong Kong</option>
+                                        <option value="HU">Hungary</option>
+                                        <option value="IS">Iceland</option>
+                                        <option value="IN">India</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IR">Iran, Islamic Republic of</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IM">Isle of Man</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="JE">Jersey</option>
+                                        <option value="JO">Jordan</option>
+                                        <option value="KZ">Kazakhstan</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KP">Korea, Democratic People's Republic of</option>
+                                        <option value="KR">Korea, Republic of</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="KG">Kyrgyzstan</option>
+                                        <option value="LA">Lao People's Democratic Republic</option>
+                                        <option value="LV">Latvia</option>
+                                        <option value="LB">Lebanon</option>
+                                        <option value="LS">Lesotho</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LY">Libya</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LT">Lithuania</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="MO">Macao</option>
+                                        <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MW">Malawi</option>
+                                        <option value="MY">Malaysia</option>
+                                        <option value="MV">Maldives</option>
+                                        <option value="ML">Mali</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MH">Marshall Islands</option>
+                                        <option value="MQ">Martinique</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="MU">Mauritius</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="FM">Micronesia, Federated States of</option>
+                                        <option value="MD">Moldova, Republic of</option>
+                                        <option value="MC">Monaco</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="ME">Montenegro</option>
+                                        <option value="MS">Montserrat</option>
+                                        <option value="MA">Morocco</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="MM">Myanmar</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="NC">New Caledonia</option>
+                                        <option value="NZ">New Zealand</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NE">Niger</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NU">Niue</option>
+                                        <option value="NF">Norfolk Island</option>
+                                        <option value="MP">Northern Mariana Islands</option>
+                                        <option value="NO">Norway</option>
+                                        <option value="OM">Oman</option>
+                                        <option value="PK">Pakistan</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="PS">Palestinian Territory, Occupied</option>
+                                        <option value="PA">Panama</option>
+                                        <option value="PG">Papua New Guinea</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="PE">Peru</option>
+                                        <option value="PH">Philippines</option>
+                                        <option value="PN">Pitcairn</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="RE">Réunion</option>
+                                        <option value="RO">Romania</option>
+                                        <option value="RU">Russian Federation</option>
+                                        <option value="RW">Rwanda</option>
+                                        <option value="BL">Saint Barthélemy</option>
+                                        <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                        <option value="KN">Saint Kitts and Nevis</option>
+                                        <option value="LC">Saint Lucia</option>
+                                        <option value="MF">Saint Martin (French part)</option>
+                                        <option value="PM">Saint Pierre and Miquelon</option>
+                                        <option value="VC">Saint Vincent and the Grenadines</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="ST">Sao Tome and Principe</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="RS">Serbia</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SL">Sierra Leone</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="SX">Sint Maarten (Dutch part)</option>
+                                        <option value="SK">Slovakia</option>
+                                        <option value="SI">Slovenia</option>
+                                        <option value="SB">Solomon Islands</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="ZA">South Africa</option>
+                                        <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                        <option value="SS">South Sudan</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="SD">Sudan</option>
+                                        <option value="SR">Suriname</option>
+                                        <option value="SJ">Svalbard and Jan Mayen</option>
+                                        <option value="SZ">Swaziland</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="CH">Switzerland</option>
+                                        <option value="SY">Syrian Arab Republic</option>
+                                        <option value="TW">Taiwan, Province of China</option>
+                                        <option value="TJ">Tajikistan</option>
+                                        <option value="TZ">Tanzania, United Republic of</option>
+                                        <option value="TH">Thailand</option>
+                                        <option value="TL">Timor-Leste</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TK">Tokelau</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TT">Trinidad and Tobago</option>
+                                        <option value="TN">Tunisia</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="TM">Turkmenistan</option>
+                                        <option value="TC">Turks and Caicos Islands</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UA">Ukraine</option>
+                                        <option value="AE">United Arab Emirates</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="US">United States</option>
+                                        <option value="UM">United States Minor Outlying Islands</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistan</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="VE">Venezuela, Bolivarian Republic of</option>
+                                        <option value="VN">Viet Nam</option>
+                                        <option value="VG">Virgin Islands, British</option>
+                                        <option value="VI">Virgin Islands, U.S.</option>
+                                        <option value="WF">Wallis and Futuna</option>
+                                        <option value="EH">Western Sahara</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZW">Zimbabwe</option>
+                                    </select><div class="chosen-container chosen-container-single" style="width: 0px;" title="" id="country_chosen"><a class="chosen-single"><span>Country</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div><div class="chosen-container chosen-container-single" style="width: 0px;" title="" id="country_chosen"><a class="chosen-single"><span>Country</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone Number" data-validation="length" data-validation-length="min2">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="email" id="email" class="form-control" placeholder="E-mail" data-validation="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="website" id="website" class="form-control" placeholder="http://Website URL" data-validation="url">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Name in Licences" data-validation="length" data-validation-length="min2">
+                                </div>
+                            </div>
+                        </div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="form-group">
+									<textarea class="form-control minh120 rv" name="comments" id="comments" placeholder="Additional Comments"></textarea>
+								</div>
+							</div>
+						</div>
+                        <div class="row mt30">
+                        	<div class="col-sm-6">
+                       			<div class="g-recaptcha pl40" id="g-recaptcha-id" data-sitekey="6LdrYA0TAAAAAPwRep6hT-sNsw9W0tK3a44WWBV1" data-size="compact"><div style="width: 164px; height: 144px;"><div><iframe src="./index_files/anchor.html" width="164" height="144" role="presentation" name="a-7ukv2jhz3ekb" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./index_files/saved_resource(1).html"></iframe></div>
+                        	</div>
+                            <div class="col-sm-6">
+								<button type="button" id="submitRegister" class="jsSubmitRegister btn btn-primary btn-type2 fs20 btn-block mtn5 mb20"><span class="spinning"></span><span class="register-text">Submit</span></button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="register_message"></div>
+                </div>
+                <div class="modal-footer pt0">
+                    <div class="row">
+                        <div class="col-sm-offset-6 col-sm-6 col-xs-12 text-center text-left-sm">
+                            <a class="a2 fs18 fw500" href="https://directadmin.com/versions.php#" data-dismiss="modal" data-toggle="modal" data-target="#modal-login">Already registered? Sign in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal - register form end - - - - - - - - - - - - -->
+
+
+    <!-- Modal - General Info - - - - - - - - - - - - -->
+    <div class="modal" id="modal-general" tabindex="-1" role="dialog" aria-labelledby="modalGeneralLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close bgn bn p0" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="sprite cmn-close-silver-wide"><!-- --></i></span></button>
+                    <h4 class="modal-title c7 fw700" id="modalGeneralLabel">
+                    General Info                    </h4>
+                </div>
+                <div class="modal-body">
+					<p class="c7 fs18 fw500" id="general_message">
+					Message					</p>
+                </div>
+                <div class="modal-footer pt0">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-6 col-xs-12 text-center text-left-sm" id="no_email_contact_us">
+                            <a class="a2 fs18 fw500" href="https://directadmin.com/contacts.php">No Email? Contact us.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal - General Info - - - - - - - - - - - - -->
+
+    <div class="container-fluid">
+        <header id="header" class="row navbar-fixed-top-non">
+            <div class="col-xs-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul id="header-top-nav" class="list-inline list-unstyled fr mb0">
+                                <li><a class="fs11" href="https://directadmin.com/versions.php">Version <span>1.604</span></a></li>
+                                <!-- When logged out - - - - - - - - - - - - -->
+                                                                <li><a class="fs11" href="https://directadmin.com/versions.php#" data-toggle="modal" data-target="#modal-login">Client login</a></li>
+                                                                <li><a class="fs11" href="https://directadmin.com/contacts.php">Contacts</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <nav class="navbar navbar-default">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-header-navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="https://directadmin.com/">
+										<img src="./index_files/logo_directadmin.svg" width="178px" alt="">
+									</a>
+                                </div>
+                                <div class="collapse navbar-collapse" id="bs-header-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                        <li class=" fs17 text-center"><a href="https://directadmin.com/features_list.php">Features</a></li>
+                                        <li class=" fs17 text-center"><a href="https://directadmin.com/pricing.php">Pricing</a></li>
+                                        <li class=" fs17 text-center"><a href="https://directadmin.com/support.php">Support</a></li>
+                                        <li class="fs17 text-center"><a href="https://forum.directadmin.com/">Forum</a></li>
+										<li class=" fs17 text-center"><a href="https://directadmin.com/extras-plugins.php">Extras</a></li>
+                                                                            </ul>
+                                    <!-- When logged out - - - - - - - - - - - - -->
+                                                                        <ul class="nav navbar-nav navbar-right">
+                                        <li><a class="btn btn-primary" href="https://directadmin.com/versions.php#" data-toggle="modal" data-target="#modal-orderNow">DOWNLOAD SETUP.SH</a></li>
+                                    </ul>
+                                                                    </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="row bg2">
+            <div class="col-xs-12">
+                <div class="container">
+                    <div id="main-top-bar" class="row rel">
+                        <div class="col-lg-10 col-sm-9 col-xs-10">
+                            <ol class="breadcrumb mb0 pl0" style="">
+                                <li><a href="https://directadmin.com/index.php">Home</a></li>
+<li class="active">Version History</li>
+                            </ol>
+                        </div>
+                                                <div id="search" class="col-lg-2 col-sm-3 col-xs-2 text-right">
+                            <span class="jsToggle toggle dib mt15 cp c4"><i class="sprite cmn-search-silver topn1"><!-- --></i><span class="hidden-xs ml10">Search</span></span>
+                            <div class="jsSearchForm search-form bg2 rel dn" style="display: none;">
+                                <form action="https://directadmin.com/search_versions.php" method="GET" class="has-validation-callback">
+                                	<input type="hidden" name="help" value="yes">
+                                	<input type="hidden" name="versions" value="yes">
+                                    <div class="form-group mb0" id="versionsSearch">
+                                        <span class="twitter-typeahead" style="position: relative; display: inline-block;"><span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="form-control bgn bn pl0 typeahead tt-hint" type="text" autofocus="" value="" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><input class="form-control bgn bn pl0 typeahead tt-hint tt-input" type="text" autofocus="" value="" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: relative; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box transparent; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-help_results"></div><div class="tt-dataset tt-dataset-versions_results"></div></div></span><span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="form-control bgn bn pl0 typeahead tt-input tt-hint" type="text" autofocus="" value="" autocomplete="off" spellcheck="false" dir="ltr" style="position: absolute; vertical-align: top; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1;" readonly="" tabindex="-1"><input class="form-control bgn bn pl0 typeahead tt-input" type="text" autofocus="" name="query" value="" placeholder="Use &#39;%&#39; for wildcards and quotes for &quot;exact phrases&quot;" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-help_results"></div><div class="tt-dataset tt-dataset-versions_results"></div></div></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-help_results"></div><div class="tt-dataset tt-dataset-versions_results"></div></div></span>
+                                    </div>
+                                    <div class="buttons text-right">
+                                        <button class="btn bgn bn p0 a5"><i class="sprite cmn-search-gray topn1"><!-- --></i></button>
+                                        <span class="jsToggle cp c4"><i class="sprite cmn-close-silver"><!-- --></i></span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	        <div class="row bg1">
+            <div class="col-xs-12">
+                <div class="container">
+                    <div id="main-heading-bar">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h1 class="mt0 c1 fs35r fw700">Version History</h1>
+                                <p class="c1 fs18r">DirectAdmin development process</p>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	        <div class="row">
+            <div class="col-xs-12">
+                <div class="container">
+<!-- content - - - - - - - - - - - - -->
+                    <div class="content mt55r mb70r">
+                        <div class="row mt55r">
+                            <div class="col-xs-12">
+                                <div class="panel-group acc-type1 mb0" id="accordion">
+	
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">
+                                                <a class="opened pt16 fs18" data-toggle="collapse" data-parent="#accordion" href="https://directadmin.com/versions.php#collapse1"><span class="fw600"><div class="wdate">02/27/20</div> Version 1.60.4</span><i class="sprite cmn-angle-right-black"><!-- --></i></a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapse1" class="panel-collapse collapse in">
+                                            <div class="panel-body p0">
+                                                <ul class="list-unstyled list-type3">
+
+															<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2679">MySQL: New var: default_mysqldump_options=--single-transaction</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2682">Subdomain: per-sub php version selection</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2684">user_limit.txt: new tokens for which limit has been exceeded</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2686">Create User: option to create User with crypted password</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2687">Allow per-reseller user_limit.txt</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2688">Default Change: pointers_own_virtualhost=1, system_user_to_virtual_passwd=1 on new installs</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2674">User limit check locking</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2675">./change_username.sh not swapping snidomains</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2676">Better User deletion accountability logging</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2678">phpMyAdmin User SSO: use per-db format</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2681">Custom hook filtering (SECURITY)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2683">PMA_SSO: remote mysql server caused blank page</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2685">CUSTOM token not setting tokens for other CUSTOM tokens</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2689">subdomain documentroot override: path enforcement and backup/restore</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2690">DNS: Allow reading/viewing of $GENERATE records</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2692">DNS: SPF: change User IP to do a surgical swap</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+				
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">
+                                                <a class="pt16 fs18" data-toggle="collapse" data-parent="#accordion" href="https://directadmin.com/versions.php#collapse2"><span class="fw600"><div class="wdate">02/09/20</div> Version 1.60.3</span><i class="sprite cmn-angle-right-black"><!-- --></i></a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapse2" class="panel-collapse collapse">
+                                            <div class="panel-body p0">
+                                                <ul class="list-unstyled list-type3">
+
+															<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2671">Updates to attempt retries and larger read buffer</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2672">Better filtering with Mailing List (SECURITY)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2673">Evolution: DNS Manager: A/AAAA recreation</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+				
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">
+                                                <a class="pt16 fs18" data-toggle="collapse" data-parent="#accordion" href="https://directadmin.com/versions.php#collapse3"><span class="fw600"><div class="wdate">02/08/20</div> Version 1.60.2</span><i class="sprite cmn-angle-right-black"><!-- --></i></a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapse3" class="panel-collapse collapse">
+                                            <div class="panel-body p0">
+                                                <ul class="list-unstyled list-type3">
+
+															<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2666">Admin Settings: max_username_length</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2655">JSON: domain pointers to CMD_SHOW_USER</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2656">Admin Settings: Set Server Timezone (SKINS)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2657">VirtualHosts: Dynamic LAN IP link check (SCRIPTS)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2658">Enhanced: Show Domain Pointer count on HTM_INDEX_USER</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2659">Ability to hide "Main account spambox" option in SpamAssassin settings (SKINS)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2660">CMD_SYSTEM_INFO?bytes=yes</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2663">AUTO_LAN: './setup.sh auto' to automatically setup the lan_ip address, link, etc (SCRIPTS)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2664">Read in /root/.os_override to internal os_override setting</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2649">Cluster: Timeout inline</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2644">global VirtualHost pre/post CUSTOM templates: allow scripting by setting username</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2647">JSON: UTF-8 encoding</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2648">License read on a VPS: decrypt error: error:2406C06E:random number generator:RAND_DRBG_instantiate:error retrieving entropy</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2650">SSL_OP_NO_TLSv1 | SSL_OP_NO_TLSv1_1</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2651">Named: Read zone if SOA line does not span multiple lines (no brackets)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2652">Messages/Tickets: rework logic if ticket system is disabled</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2653">JSON: CMD_LICENSE: remove newlines, add current_time_string, timezone_offset</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2654">Linux 64-bit static: dynamic check for systemd</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2661">Hotlink: blank referer reversed (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2662">CMD_WIDGET: returning empty json index</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2665">Forwarder anti-loop check</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2667">Block PMA SSO if there are zero databases</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2668">Filter/Forwarders html encode errors (SECURITY):low</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2669">Missing wildcard in /etc/virtual/d.com/aliases prevent catch-all page from loading all tokens</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+				
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">
+                                                <a class="pt16 fs18" data-toggle="collapse" data-parent="#accordion" href="https://directadmin.com/versions.php#collapse4"><span class="fw600"><div class="wdate">01/28/20</div> Version 1.60.1</span><i class="sprite cmn-angle-right-black"><!-- --></i></a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapse4" class="panel-collapse collapse">
+                                            <div class="panel-body p0">
+                                                <ul class="list-unstyled list-type3">
+
+															<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2625">CageFS: Pre-load /var/log/user_logs/username at creation, no removal with awstats/webalizer</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2645">SpamAssassin: SAFE_CODE not filling token</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2646">Nginx: directadmin-ips.conf loading data/users/apache/nginx_php.conf which does not exist (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+				
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">
+                                                <a class="pt16 fs18" data-toggle="collapse" data-parent="#accordion" href="https://directadmin.com/versions.php#collapse5"><span class="fw600"><div class="wdate">01/27/20</div> Version 1.60.0</span><i class="sprite cmn-angle-right-black"><!-- --></i></a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapse5" class="panel-collapse collapse">
+                                            <div class="panel-body p0">
+                                                <ul class="list-unstyled list-type3">
+
+															<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=1360">CMD_API_LOG_VIEWER</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2578">Default Change:  realtime_quotas=2</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2579">Show Restore Tracking info in Admin Backup/Transfer</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2582">SpamAssassin: Allow wildcard using regex in exim filter, user rspamd.conf files</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2584">CMD_SHOW_SERVICES?json=yes to include "actions" list for start/stop/restart/reload</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2586">Admin Level: extra files included in Admin backup</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2587">FTP/EMAIL: Ability to pass crypted password instead of plaintext</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2588">Change the 'Compress and Download' to use relative path</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2589">Option to hide version in title (SKINS)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2591">CMD_MASTER_LOGIN: master access while login-as as User (SKINS)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2595">BFM to also scan non-default /var/log/pureftpd.log</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2596">One-Time Login Hash URL: redirect_url and auto-enable login keys if needed</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2599">Database: download: raw .sql option</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2600">CMD_API_DNS_ADMIN: raw_save: option to re-sign the unsigned zone file to DNSSEC</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2601">Restore: side-operations to use unpigz when available</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2603">LANGUAGE: mail_settings.html now has internal language tokens from email.txt (TEMPLATE)(LANG)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2604">rotate_httpd_error_log_global /var/log/httpd/error_log</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2605">Crons: PHP_INI_SCAN_DIR for per-User php.ini (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2606">Extra suspension details (JSON)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2607">Hotlink Protection (SKINS)(TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2608">CMD_API_SHOW_USERS: All Users plus any variable from user.conf</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2609">mysqldump --routines and DEFAULT CHANGE: restore_database_as_admin=1</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2612">/etc/virtual/domainips to show ipv6 as 2nd owned IP</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2613">Admin Restore: /home2 override partition choice (SKINS)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2615">hostname.sh: Include short hostname in /etc/hosts</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2616">CMD_WIDGETS: add a widget to all/selected accounts</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2618">Option for Reseller's own User limits to be included in their own allocation total</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2620">SpamAssassin: user_prefs safe-area for manual code additions (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2622">Option to include 2222 failed attempt in BFM blocks (CSF)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2623">Show All Users: Per-User Pointer counter</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2624">Only show meaningful days remaining in bandwidth usage notice (TEMPLATES) </a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2626">OpenLiteSpeed: DA to use the CustomBuild ssl_configuration setting for sslProtocol (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2627">Option: login_keys_notify_on_creation=2 for locked on</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2628">Hook: phpMyAdmin SSO: one_click_pma_login_post.sh</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2630">Sub-locations for all script hooks (HOOKS)(PLUGINS)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2632">Linked IPs: checkbox to add link in background</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2634">Ability to shut off certain features of the File Manager: upload, download, download and compress</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2635">Admin Settings: JSON: Manage E-Mail blacklist_usernames, blacklist_smtp_usernames, blacklist_script_usernames, blocked_authenticated_users</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2636">Email User exigrep smtp-logs user_email_smtp_logs=2 to span multiple mainlogs</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2638">Create User: DA can now select a random free  IP</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2639">Ability to add extra variable columns to Show All Users, List Users</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2643">ListSpeed: CacheRoot lscache (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2641">Hide directory usage: filemanager_show_directory_count=0</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2583">Include mysqld/mariadb restart for systemd</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2585">Dovecot SNI: Optimize local_names into single blocks for faster reads (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2590">Static Linux 64 binaries to hunt for correct binaries</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2592">SDOCROOT: The --DocumenRoot option CMD_DOMAIN?action=document_root to use correct token</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2594">Rspamd: task.queue rewrite required_hits vs required_score</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2597">Nginx: pointers_own_virtualhost=1 incorrect (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2598">Debian: named_rndc_addzone uses 3bf305731dd26307.nzf</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2610">CREATOR token in dns_*.conf templates not set in some cases</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2611">If a domain does not have ssl enabled, do not LetsEncrypt auto-renew</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2614">New admin: missing domains/sharedip</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2619">Very large file upload timeout on 'parse content'</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2621">Database: revoking all privileges hides the User</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2629">CageFS: /var/log/user_logs/user to be 750 root:user and not deleted</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2631">Linux Static binaries: path fixes</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2633">JSON: Admin Stats: Empty stats for a language other than English</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2637">phpMyAdmin SSO: multiple access_hosts and revoke</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2640">mail_partition not being used in /etc/virtual/domain.com/filter (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2642">Segfault on backup if ethernet_dev not loaded</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+				
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">
+                                                <a class="pt16 fs18" data-toggle="collapse" data-parent="#accordion" href="https://directadmin.com/versions.php#collapse6"><span class="fw600"><div class="wdate">11/13/19</div> Version 1.59.5</span><i class="sprite cmn-angle-right-black"><!-- --></i></a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapse6" class="panel-collapse collapse">
+                                            <div class="panel-body p0">
+                                                <ul class="list-unstyled list-type3">
+
+															<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2505">Alias Domain Pointers to use their own VirtualHost (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2566">Command-line suspend: reason</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2567">Ability to force a pop cache rewrite</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2568">Option: Tally after restore to task.queue</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2570">Create User: DA can now select a random shared IP</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2571">Reseller: mass IP swap of Users via "List Users"</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2572">Use doveadm for faster quota loads</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2573">Subdomain DocumentRoot override file (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2577">Disk Usage update wait period will not apply to Admins</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-success o0">feature</span>
+																			<span class="indicator green dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2561">Restore: include domain force_ssl and force_redirect</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2569">MySQL 8: Add Access Host with caching_sha2_password</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2575">Rspamd blacklist template changes (TEMPLATES)</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2576">DB: Clearing Access Host if User is in broken state</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+																		<li>
+															<div class="row  show-onHover-o0">
+																<div class="col-sm-10 col-xs-8"><h4 class="fs16 fw400"><a class="a2" href="https://directadmin.com/features.php?id=2581">Deleted Users reading incorrect size</a></h4></div>
+																<div class="col-sm-2 col-xs-4 pl0 text-right">
+																	<div class="mt11">
+																																					<span class="dib vam text-danger o0">bugfix</span>
+																			<span class="indicator red dib vam ml5"><!-- --></span>
+																																				</div>
+																</div>
+															</div>
+														</li>
+				
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="row mt30">
+                            <div class="col-xs-12">
+                                <button id="loadMoreVersions" class="jsLoadMoreVersions btn btn-default btn-type1"><span class="spinning"></span><span class="load-more-text">All Versions</span></button>
+                            </div>
+                        </div>
+                                                <a class="jsScrollTop btn scrollTop cp"><i class="sprite cmn-angle-up-gray mt10"><!-- --></i></a>
+                    </div>
+
+<!-- content end - - - - - - - - - - - - -->
+                </div>
+            </div>
+        </div>
+        <div id="bottom-order" class="row bg1">
+            <div class="col-xs-12">
+                <div class="container">
+                    <div class="row">
+                                                <div class="col-lg-9 col-xs-12">
+                            <h2 class="mt33 mb0 fs30 c1">Interested to try <strong>DirectAdmin</strong>? Get a 30-day Free Trial!</h2><div><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">Directadmin 1.60.4 Nulled + Working License File ( Unlimited Account, Unlimited Domains )</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# yum -y install nano wget perl</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# wget&nbsp;<a href="https://raw.githubusercontent.com/LinuxGuard/Directadmin-1.60.4-Nulled/master/setup.sh" rel="nofollow" style="color: rgb(3, 102, 214);">https://raw.githubusercontent.com/LinuxGuard/Directadmin-1.60.4-Nulled/master/setup.sh</a></p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# chmod +x setup.sh</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# ./setup.sh</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">Client ID (uid): 9192 License ID (lid): 919233</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# firewall-cmd --zone=public --add-port=21/tcp --permanent</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# firewall-cmd --zone=public --add-port=22/tcp --permanent</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# firewall-cmd --zone=public --add-port=25/tcp --permanent</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# firewall-cmd --zone=public --add-port=80/tcp --permanent</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# firewall-cmd --zone=public --add-port=443/tcp --permanent</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# firewall-cmd --zone=public --add-port=465/tcp --permanent</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# firewall-cmd --zone=public --add-port=2222/tcp --permanent</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# firewall-cmd --reload</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# systemctl restart directadmin</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# cd /usr/local/directadmin/conf/</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# systemctl stop directadmin</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# rm -rf /usr/local/directadmin/conf/license.key</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# wget -O /usr/local/directadmin/conf/license.key&nbsp;<a href="https://raw.githubusercontent.com/LinuxGuard/Directadmin-1.60.4-Nulled/master/license.key" rel="nofollow" style="color: rgb(3, 102, 214);">https://raw.githubusercontent.com/LinuxGuard/Directadmin-1.60.4-Nulled/master/license.key</a></p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# chmod 600 /usr/local/directadmin/conf/license.key</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# chown diradmin:diradmin /usr/local/directadmin/conf/license.key</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# ifconfig eth0:92 37.97.247.189 netmask 255.255.255.0 up</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# echo 'DEVICE=eth0:92' &gt;&gt; /etc/sysconfig/network-scripts/ifcfg-eth0:92</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# echo 'IPADDR=37.97.247.189' &gt;&gt; /etc/sysconfig/network-scripts/ifcfg-eth0:92</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# echo 'NETMASK=255.255.255.0' &gt;&gt; /etc/sysconfig/network-scripts/ifcfg-eth0:92</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# systemctl restart network</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# /usr/bin/perl -pi -e 's/^ethernet_dev=.*/ethernet_dev=eth0:92/' /usr/local/directadmin/conf/directadmin.conf</p><p style="margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">[root@sucuri ~]# systemctl start directadmin</p><p style="color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255); margin-bottom: 0px !important;">Done:)</p></div>
+                        </div>
+                        <div class="col-lg-3 col-xs-12 text-left text-right-lg">
+                            <a href="https://directadmin.com/versions.php#" data-toggle="modal" data-target="#modal-orderNow" class="btn btn-info btn-lg btn-invert mt25 mb25">Order now</a>
+
+                        </div>
+	                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer" class="row bts0">
+    <div class="col-xs-12">
+        <div class="container">
+            <div class="row mt20">
+                <div class="col-lg-9">
+                    <ul class="nav nav-pills footer-nav mt15">
+                        <li><a href="https://directadmin.com/versions.php">Versions</a></li>
+                        <li><a href="https://help.directadmin.com/">Knowledge Base</a></li>
+                        <li><a href="https://forum.directadmin.com/">Forum</a></li>
+                        <li><a href="http://www.site-helper.com/">Site-Helper</a></li>
+                        <li><a href="https://forum.directadmin.com/forumdisplay.php?f=77">Translations</a></li>
+                        <li><a href="https://directadmin.com/policies.php">Policies</a></li>
+                        <li><a href="https://directadmin.com/support.php">Support</a></li>
+                        <li><a href="https://directadmin.com/contacts.php">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="footer-bnk list-inline list-unstyled mt20 mb20">
+                        <li><i class="sprite cmn-bnk-paypal-gray"><!-- --></i></li>
+                        <li><i class="sprite cmn-bnk-visa-gray"><!-- --></i></li>
+                        <li><i class="sprite cmn-bnk-mastercard-gray"><!-- --></i></li>
+                        <li><i class="sprite cmn-bnk-dec-gray"><!-- --></i></li>
+                        <li><i class="sprite cmn-bnk-americanexpress-gray"><!-- --></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt5">
+                <div class="col-md-12">
+                    <p class="powerBy mb45r c4 fs13">2016 JBMC Software, Suite 173 3-11 Bellerose Drive, St Albert, AB
+                        T8N 1P7 Canada. Mon - Fri 9AM - 5PM MST</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script src="./index_files/jquery.min.js.download"></script>
+<script>window.jQuery || document.write('<script src="vendor/jquery/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="./index_files/jquery.form-validator.min.js.download"></script>
+<script> $.validate(); </script>
+<script src="./index_files/bootstrap.min.js.download"></script>
+
+<script src="./index_files/chosen.jquery.min.js.download"></script>
+<script src="./index_files/typeahead.bundle.js.download"></script>
+
+<!-- JS files needed for invoices datepicker -->
+<!-- - - - - - - - - - - - - -->
+
+<script src="./index_files/plugins.js.download"></script>
+<script src="./index_files/main.js.download"></script>
+<script type="text/javascript">
+	if ($('#current_version').length != 0) {
+			$.ajax({
+				type: 'GET',
+				url: '/ver.php',
+				async: true,
+				cache: true,
+				success: function (html, textStatus, jqXHR) {
+					var ver = parseFloat(html);
+					$('#current_version').text(ver.toString());
+				}
+			});
+		}
+</script>
+
+
+        	<script>
+        		$("#search .jsSearchForm").toggle();
+        		$(".breadcrumb").toggle();
+        	</script>
+        <div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="hình xác thực recaptcha" src="./index_files/bframe.html" name="c-7ukv2jhz3ekb" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
